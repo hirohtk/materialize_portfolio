@@ -14,6 +14,11 @@ nav {
     margin-right: 30px;
 }
 
+.scaleup {
+    -webkit-animation: scaleup 0.5s;
+    transform: scale(1.1, 1.1);
+}
+
 .enlarge {
     -webkit-animation: enlarge 0.5s;
     width: 300px;
@@ -69,6 +74,17 @@ nav {
         width: 300px;
         height: 300px;
       -webkit-transform: translate(-10px, -10px);
+    }
+}
+
+@-webkit-keyframes scaleup {
+    0% {
+      
+      transform: scale(1, 1);
+    }
+
+    100% {
+       transform: scale(1.1, 1.1);
     }
 }
 
