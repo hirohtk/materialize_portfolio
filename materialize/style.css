@@ -2,6 +2,84 @@ nav {
     
 }
 
+.thumbnail {
+    min-width: 280px;
+    height: 280px;
+    position: relative;
+    left: 100px;
+    bottom: 80px;
+    border-style: hidden;
+    border-width: 20px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+}
+
+.enlarge {
+    -webkit-animation: enlarge 0.5s;
+    width: 300px;
+    height: 300px;
+    -webkit-transform: translate(-10px, -10px);
+}
+
+.deflate {
+    -webkit-animation: deflate 0.5s;
+    width: 280px;
+    height: 280px;
+    -webkit-transform: translate(0x, 0px);
+}
+
+.fade {
+    -webkit-animation: fade 0.5s;
+    filter: brightness(80%);
+}
+
+
+@-webkit-keyframes fade {
+    0% {
+      
+    }
+
+    100% {
+        filter: brightness(80%);
+    }
+}
+
+@-webkit-keyframes lighten {
+    0% {
+      
+    }
+
+    100% {
+        filter: brightness(100%);
+    }
+}
+
+@-webkit-keyframes enlarge {
+    0% {
+      
+      -webkit-transform: translate(0, 0px);
+    }
+
+    100% {
+        width: 300px;
+        height: 300px;
+      -webkit-transform: translate(-10px, -10px);
+    }
+}
+
+@-webkit-keyframes deflate {
+    0% {
+        -webkit-transform: translate(-10px, -10px);
+      
+    }
+
+    100% {
+        width: 280px;
+        height: 280px;
+        -webkit-transform: translate(0, 0px);
+    }
+}
+
 #myImage {
     width: 250px !important;
     height: 250px !important;
@@ -14,7 +92,10 @@ nav {
     behavior: url(PIE.htc); /* remove if you don't care about IE8 */
 }
 
-
+.row {
+    margin-top: 6rem;
+    
+}
 
 #yellow {
     width: 10px;
@@ -82,4 +163,5 @@ nav {
         
       -webkit-transform: translate(600px, 0px);
     }
-  }
+}
+
