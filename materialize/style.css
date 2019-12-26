@@ -1,3 +1,85 @@
 nav {
-    background-color: darkblue;
+    
 }
+
+#myImage {
+    width: 250px !important;
+    height: 250px !important;
+    position:relative;
+    border: 10px solid white
+}
+
+.circleBase {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+}
+
+
+
+#yellow {
+    width: 10px;
+    height: 10px;
+    background: yellow;
+    border: 1px solid yellow;
+    -webkit-animation: test 1s infinite;  
+    -webkit-animation-delay: 0.1s;
+}
+#blue {
+    width: 10px;
+    height: 10px;
+    background: blue;
+    border: 1px solid blue;
+    -webkit-animation: test 1s infinite;
+    -webkit-animation-delay: 0.3s;  
+}
+#red {
+    width: 10px;
+    height: 10px;
+    background: red;
+    border: 1px solid red;
+    -webkit-animation: test 1s infinite;
+    -webkit-animation-delay: 0.7s;   
+}
+#green {
+    width: 10px;
+    height: 10px;
+    background: green;
+    border: 1px solid green;
+    -webkit-animation: test 1s infinite;  
+    -webkit-animation-delay: 0.5s;
+}
+
+
+#bg-for-circles {
+    background-color: white;
+    position:relative;
+}
+
+#transparent {
+    position:relative;
+    color: rgba(255, 255, 255, 0.5);
+    top:68px;
+}
+
+@-webkit-keyframes test {
+    0% {
+      opacity: 1;
+  
+      -webkit-transform: translate(0, 0px);
+    }
+    30% {
+      
+      
+    }
+    50% {
+    }
+    75% {
+  
+      
+    }
+    100% {
+      opacity: 0.8;
+        
+      -webkit-transform: translate(600px, 0px);
+    }
+  }

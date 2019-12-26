@@ -8,39 +8,132 @@
   <link type="text/css" rel="stylesheet" href="./css/materialize.css" media="screen,projection" />
   <link rel="stylesheet" href="style.css">
   <!--Let browser know website is optimized for mobile-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
   <nav>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper    blue-grey darken-2">
       <a href="#" class="brand-logo">Kensen Hirohata</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#introduction">About Me</a></li>
-        <li><a href="#structure">Portfolio</a></li>
-        <li><a href="#initialization">Contact Me</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact Me</a></li>
       </ul>
     </div>
   </nav>
   <div class="container">
 
+    <br>
+    <div id="bg-for-circles">
+      <!--<h2 id="transparent">TEST</h2>-->
+      <div class="circleBase" id="yellow"></div>
+      <div class="circleBase" id="blue"></div>
+      <div class="circleBase" id="red"></div>
+      <div class="circleBase" id="green"></div>
+    </div>
 
-    <div class="row">
+    <div class="row light-blue lighten-4">
       <div class="col s12 m9 l10">
-        <div id="about" class="section scrollspy">
-          <p>About Me </p>
+
+        <div class="col s12 m12 section scrollspy" id="about">
+
+          <h4 class="header ">About Me</h4>
+          <div class="card horizontal">
+            <div class="card-image valign-wrapper center-align">
+              <img id="myImage" src="./images/Wave_Cropped.jpg">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <p>
+                  With a BS Degree in Biochemistry from the UW, I am currently a sales engineer
+                  for
+                  lab scale tangential flow membrane research equipment, and I consult with customers to
+                  explore
+                  best fits for their project needs.
+                  <br><br>
+                  I've developed an interest in web design/development to create
+                  webpages and web apps which are currently lacking in my industry, so that better resources can be
+                  used to help others that follow similar lines of work.
+                  <br><br>
+                  If you would like to learn more about me, please visit the Contact page at the top right of the
+                  screen.</p>
+              </div>
+            </div>
+          </div>
         </div>
 
+      </div>
+    </div>
+    <div class="row  light-blue lighten-3">
+      <div class="col s12 m9 l10">
+        <h4 class="header ">Portfolio</h4>
         <div id="portfolio" class="section scrollspy">
-          <p>Portfolio </p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua. Volutpat est velit egestas dui id ornare. Scelerisque eleifend donec pretium vulputate sapien
+            nec sagittis. Scelerisque eleifend donec pretium vulputate sapien. Nunc id cursus metus aliquam eleifend. Ut
+            consequat semper viverra nam libero justo laoreet. Placerat vestibulum lectus mauris ultrices eros in
+            cursus.
+            Proin fermentum leo vel orci. Tristique senectus et netus et malesuada fames ac. Magna ac placerat
+            vestibulum
+            lectus mauris ultrices eros in. A diam maecenas sed enim ut. Dictum fusce ut placerat orci nulla. Est
+            pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. Congue nisi vitae suscipit tellus
+            mauris a diam maecenas sed. Euismod nisi porta lorem mollis aliquam ut.
+            <br>
+            Purus semper eget duis at tellus at. In nisl nisi scelerisque eu ultrices vitae. Aliquam etiam erat velit
+            scelerisque. Curabitur gravida arcu ac tortor dignissim. Aliquam eleifend mi in nulla posuere sollicitudin
+            aliquam ultrices. Condimentum lacinia quis vel eros donec ac. Vitae suscipit tellus mauris a diam maecenas
+            sed
+            enim. Aenean euismod elementum nisi quis. Sit amet aliquam id diam maecenas. Volutpat lacus laoreet non
+            curabitur gravida. Suspendisse sed nisi lacus sed.
+            <br>
+            Urna condimentum mattis pellentesque id. Sit amet facilisis magna etiam. Eget nulla facilisi etiam dignissim
+            diam quis enim. Gravida arcu ac tortor dignissim convallis aenean et. Ut consequat semper viverra nam libero
+            justo laoreet sit amet. Nunc aliquet bibendum enim facilisis gravida neque convallis a. Elementum nisi quis
+            eleifend quam adipiscing vitae proin sagittis nisl. Neque ornare aenean euismod elementum. Morbi tincidunt
+            augue interdum velit euismod. Cras sed felis eget velit aliquet sagittis id. Auctor neque vitae tempus quam
+            pellentesque. Suspendisse faucibus interdum posuere lorem ipsum dolor sit.</p>
         </div>
+      </div>
+    </div>
 
+    <div class="row  light-blue lighten-2">
+      <div class="col s12 m9 l10">
         <div id="contact" class="section scrollspy">
           <p>Contact Me </p>
         </div>
       </div>
     </div>
   </div>
+  <footer class="page-footer   blue-grey darken-2">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Footer Content</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2014 Copyright Text
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
 
 
 
