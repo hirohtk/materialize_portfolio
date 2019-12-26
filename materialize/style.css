@@ -33,6 +33,11 @@ nav {
     filter: brightness(80%);
 }
 
+.brighten{
+    -webkit-animation: brighten 0.5s;
+    filter: brightness(100%);
+}
+
 
 @-webkit-keyframes fade {
     0% {
@@ -44,9 +49,9 @@ nav {
     }
 }
 
-@-webkit-keyframes lighten {
+@-webkit-keyframes brighten {
     0% {
-      
+        filter: brightness(80%)
     }
 
     100% {
