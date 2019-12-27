@@ -6,6 +6,10 @@ $(document).ready(function () {
     $(".thumbnail").mouseover(function () {
 
         // PROBLEM WAS THAT WHENEVER I MOUSE OVER A CHILD ELEMENT IT MOUSES OUT.  CHANGED TO MOUSELEAVE, THINGS SEEM GOOD!
+        // *****************
+        // The mouseout event triggers when the mouse pointer leaves any child elements as well the selected element.
+        // The mouseleave event is only triggered when the mouse pointer leaves the selected element.
+        // *****************
 
         $(".thumbnail").removeClass("brighten");
         $(this).addClass("enlarge");
