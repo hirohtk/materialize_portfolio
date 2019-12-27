@@ -1,3 +1,177 @@
 nav {
-    background-color: darkblue;
+    
 }
+
+.thumbnail {
+    min-width: 280px;
+    height: 280px;
+    position: relative;
+    left: 100px;
+    bottom: 80px;
+    border-style: hidden;
+    border-width: 20px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+}
+
+.activator {
+    width: 300px;
+    height: 200px;
+}
+
+.enlarge {
+    -webkit-animation: enlarge 0.5s;
+    width: 300px;
+    height: 300px;
+    -webkit-transform: translate(-10px, -10px);
+}
+
+.deflate {
+    -webkit-animation: deflate 0.5s;
+    width: 280px;
+    height: 280px;
+    -webkit-transform: translate(0x, 0px);
+}
+
+.fade {
+    -webkit-animation: fade 0.5s;
+    filter: brightness(80%);
+}
+
+.brighten{
+    -webkit-animation: brighten 0.5s;
+    filter: brightness(100%);
+}
+
+
+@-webkit-keyframes fade {
+    0% {
+      
+    }
+
+    100% {
+        filter: brightness(80%);
+    }
+}
+
+@-webkit-keyframes brighten {
+    0% {
+        filter: brightness(80%)
+    }
+
+    100% {
+        filter: brightness(100%);
+    }
+}
+
+@-webkit-keyframes enlarge {
+    0% {
+      
+      -webkit-transform: translate(0, 0px);
+    }
+
+    100% {
+        width: 300px;
+        height: 300px;
+      -webkit-transform: translate(-10px, -10px);
+    }
+}
+
+@-webkit-keyframes deflate {
+    0% {
+        -webkit-transform: translate(-10px, -10px);
+      
+    }
+
+    100% {
+        width: 280px;
+        height: 280px;
+        -webkit-transform: translate(0, 0px);
+    }
+}
+
+#myImage {
+    width: 250px !important;
+    height: 250px !important;
+    position:relative;
+    border: 10px solid white
+}
+
+.circleBase {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+}
+
+.row {
+    margin-top: 6rem;
+    
+}
+
+#yellow {
+    width: 10px;
+    height: 10px;
+    background: yellow;
+    border: 1px solid yellow;
+    -webkit-animation: test 1s infinite;  
+    -webkit-animation-delay: 0.1s;
+}
+#blue {
+    width: 10px;
+    height: 10px;
+    background: blue;
+    border: 1px solid blue;
+    -webkit-animation: test 1s infinite;
+    -webkit-animation-delay: 0.3s;  
+}
+#red {
+    width: 10px;
+    height: 10px;
+    background: red;
+    border: 1px solid red;
+    -webkit-animation: test 1s infinite;
+    -webkit-animation-delay: 0.7s;   
+}
+#green {
+    width: 10px;
+    height: 10px;
+    background: green;
+    border: 1px solid green;
+    -webkit-animation: test 1s infinite;  
+    -webkit-animation-delay: 0.5s;
+}
+
+
+#bg-for-circles {
+    background-color: white;
+    position:relative;
+}
+
+#transparent {
+    position:relative;
+    color: rgba(255, 255, 255, 0.5);
+    top:68px;
+}
+
+@-webkit-keyframes test {
+    0% {
+      opacity: 1;
+  
+      -webkit-transform: translate(0, 0px);
+    }
+    30% {
+      
+      
+    }
+    50% {
+    }
+    75% {
+  
+      
+    }
+    100% {
+      opacity: 0.8;
+        
+      -webkit-transform: translate(600px, 0px);
+    }
+}
+
