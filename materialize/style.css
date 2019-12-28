@@ -2,6 +2,29 @@ nav {
     
 }
 
+#portfolioBlock {
+    /* NEEDED THESE SO THAT EXPANDING THE CARD WOULDNT PUSH THESE DOWN*/
+    height: 90rem;
+}
+
+#contactBlock {
+    /* NEEDED THESE SO THAT EXPANDING THE CARD WOULDNT PUSH THESE DOWN*/
+    height: 40rem;
+    position: relative;
+}
+
+#contactMe {
+    /* NEEDED THESE SO THAT EXPANDING THE CARD WOULDNT PUSH THESE DOWN*/
+    position: absolute;
+    vertical-align: top;
+    top:0px;
+}
+
+.activator {
+    height: 200px;
+    width: 100%;
+}
+
 .thumbnail {
     min-width: 280px;
     height: 280px;
@@ -14,23 +37,23 @@ nav {
     margin-right: 30px;
 }
 
-.activator {
-    width: 300px;
-    height: 200px;
+.scaleup {
+    -webkit-animation: scaleup 0.5s;
+    transform: scale(1.1, 1.1);
 }
 
 .enlarge {
     -webkit-animation: enlarge 0.5s;
-    width: 300px;
-    height: 300px;
-    -webkit-transform: translate(-10px, -10px);
+    width: 310px;
+    height: 310px;
+    -webkit-transform: translate(-5px, -10px);
 }
 
 .deflate {
     -webkit-animation: deflate 0.5s;
     width: 280px;
     height: 280px;
-    -webkit-transform: translate(0x, 0px);
+    -webkit-transform: translate(0px, 0px);
 }
 
 .fade {
@@ -66,14 +89,26 @@ nav {
 
 @-webkit-keyframes enlarge {
     0% {
-      
+      width: 280px;
+      height: 280px;
       -webkit-transform: translate(0, 0px);
     }
 
     100% {
-        width: 300px;
-        height: 300px;
-      -webkit-transform: translate(-10px, -10px);
+        width: 310px;
+        height: 310px;
+      -webkit-transform: translate(-5px, -10px);
+    }
+}
+
+@-webkit-keyframes scaleup {
+    0% {
+      
+      transform: scale(1, 1);
+    }
+
+    100% {
+       transform: scale(1.1, 1.1);
     }
 }
 
@@ -174,4 +209,3 @@ nav {
       -webkit-transform: translate(600px, 0px);
     }
 }
-

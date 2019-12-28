@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     console.log("document ready");
     $('.scrollspy').scrollSpy();
@@ -6,10 +5,6 @@ $(document).ready(function () {
     $(".thumbnail").mouseover(function () {
 
         // PROBLEM WAS THAT WHENEVER I MOUSE OVER A CHILD ELEMENT IT MOUSES OUT.  CHANGED TO MOUSELEAVE, THINGS SEEM GOOD!
-        // *****************
-        // The mouseout event triggers when the mouse pointer leaves any child elements as well the selected element.
-        // The mouseleave event is only triggered when the mouse pointer leaves the selected element.
-        // *****************
 
         $(".thumbnail").removeClass("brighten");
         $(this).addClass("enlarge");
@@ -17,7 +12,7 @@ $(document).ready(function () {
         $(".thumbnail:not(#immune)").addClass("fade");
 
         $(this).mouseleave(function () {
-            $(this).addClass("deflate");
+            //$(this).addClass("deflate");
             $(".thumbnail").addClass("brighten");
             $(this).removeClass("enlarge");
             function deflate() {
