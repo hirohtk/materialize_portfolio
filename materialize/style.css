@@ -8,7 +8,7 @@ body {
 }
 
 #aboutBlock, #portfolioBlock, #contactBlock {
-    border: 1px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #commentOpen {
@@ -24,6 +24,10 @@ body {
     border: 1px solid black;
 }
 
+footer {
+    margin-top: 6rem;
+}
+
 #commentInstructions {
     margin-top: 6rem;
 }
@@ -33,11 +37,16 @@ body {
 }
 
 .topText {
-    color:black !important;
+    color:black
 }
 
+nav {
+    background-image: linear-gradient(rgb(63, 191, 241), rgb(75, 158, 253)) !important;
+}
 #kensen {
-    margin-left: 42%;
+    color:black !important;
+    font-family: 'Ibarra Real Nova', serif;
+    
 }
 
 .hidden {

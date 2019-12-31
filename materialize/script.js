@@ -53,7 +53,10 @@ $(document).ready(function () {
                     $(document.elementFromPoint(1637, 425)).click();
                     
                     $("#commentSubmit").on("click", function() {
-
+                        var objForBackEnd = {
+                            coordinates: (x, y),
+                            comment: $("#textarea2").val().trim(),
+                        }
                         // ajax post to my API if hooking to db
                         // Can't I write an API that simply posts to my sql database?  Just make a website with a post route? 
 
@@ -86,10 +89,10 @@ $(document).ready(function () {
             //$(this).addClass("deflate");
             $(".thumbnail").addClass("brighten");
             $(this).removeClass("enlarge");
-            function deflate() {
-                $(".deflate").removeClass("deflate")
-            }
-            setTimeout(deflate, 500);
+            // function deflate() {
+            //     $(".deflate").removeClass("deflate")
+            // }
+            // setTimeout(deflate, 500);
             $(this).attr("id", "");
             $(".thumbnail").removeClass("fade");
         })
