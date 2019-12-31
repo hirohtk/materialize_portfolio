@@ -11,8 +11,33 @@ body {
     border: 1px solid black;
 }
 
+#commentOpen {
+    position: fixed;
+    right: 3%;
+}
+
+#commentBox {
+    width: 15%;
+    position: fixed;
+    right: 10px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#commentInstructions {
+    margin-top: 6rem;
+}
+
+#textarea2, #commentInstructions{
+    width: 14rem !important;
+}
+
 .topText {
     color:black !important;
+}
+
+#kensen {
+    margin-left: 42%;
 }
 
 .hidden {
@@ -185,7 +210,7 @@ body {
     behavior: url(PIE.htc); /* remove if you don't care about IE8 */
 }
 
-.row:not(#notFooter) {
+.row:not(.not) {
     margin-top: 15rem;
 }
 
