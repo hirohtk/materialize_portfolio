@@ -74,6 +74,8 @@ var portfolio = [
 // SORTING:  Can make new objects and push based on date created (need to add field), etc
 
 $(document).ready(function () {
+    var ScrollY;
+
     $('.scrollspy').scrollSpy();
 
     $("#aboutBlock").addClass("flyInLeft");
@@ -126,6 +128,8 @@ $(document).ready(function () {
         //$("#col2").append("<p>Back End</p>");
         $("#col3").empty();
         //$("#col3").append("<p>Full Stack</p>");
+
+        $(this).addClass("hidden")
 
         function sort(folio) {
 
@@ -194,11 +198,11 @@ $(document).ready(function () {
     });
 
     $(document).scroll(function () {
-        var y = $(this).scrollTop();
-        if (y > 200) {
+        ScrollY = $(this).scrollTop();
+        if (ScrollY > 200) {
             $("#portfolioBlock").addClass("flyInRight");
         }
-        if (y > 1700) {
+        if (ScrollY > 1700) {
             $("#contactBlock").addClass("flyInLeft");
         }
     });
@@ -244,10 +248,12 @@ $(document).ready(function () {
                     $("#commentSubmit").on("click", function () {
                         var objForBackEnd = {
                             coordinates: "(" + x + "," + y + ")",
+                            depth: ScrollY,
                             comment: $("#textarea2").val().trim(),
                         }
                         console.log(objForBackEnd.comment);
                         localStorage.setItem("coordinates", objForBackEnd.coordinates);
+                        localStorage.setItem("scrollY", objForBackEnd.depth);
                         localStorage.setItem("comment", objForBackEnd.comment);
                         // ajax post to my API if hooking to db
                         // Can't I write an API that simply posts to my sql database?  Just make a website with a post route? 

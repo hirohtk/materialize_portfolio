@@ -162,6 +162,23 @@ span {
     }
 }
 
+@-webkit-keyframes flyInTop {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(0px, -100px);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+.flyInTop {
+    -webkit-animation: flyInTop 1s;
+    animation-delay: 1s;
+    opacity: 1;
+}
+
 @-webkit-keyframes fade {
     0% {
         filter: brightness(100%);
