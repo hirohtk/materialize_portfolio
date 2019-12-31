@@ -1,8 +1,116 @@
+var portfolio = [
+    {
+        name: "Word Guess Game",
+        img: "images/sushi-1080x584.jpg",
+        repo: "https://github.com/hirohtk/Word-guess-game",
+        deployed: "https://hirohtk.github.io/Word-guess-game/",
+    },
+    {
+        name: "RPG Game",
+        img: "images/star_wars.gif",
+        repo: "https://github.com/hirohtk/Star-wars-game",
+        deployed: "https://hirohtk.github.io/Star-wars-game/",
+    },
+    {
+        name: "Trivia Game",
+        img: "images/trivia_game.gif",
+        repo: "https://github.com/hirohtk/TriviaGame",
+        deployed: "https://hirohtk.github.io/TriviaGame/",
+    },
+    {
+        name: "LIRI Bot",
+        img: "images/node_logo_black.png",
+        repo: "https://github.com/hirohtk/liri-node-app",
+        deployed: "CLI App - Undeployable",
+    },
+    {
+        name: "Word Guess Game - CLI",
+        img: "images/01-WordGuess-Cli.gif",
+        repo: "https://github.com/hirohtk/word_guess_node",
+        deployed: "CLI App - Undeployable",
+    },
+    {
+        name: "Bamazon - CLI",
+        img: "images/sql.png",
+        repo: "https://github.com/hirohtk/bamazon_assignment",
+        deployed: "CLI App - Undeployable",
+    },
+    {
+        name: "FriendFinder",
+        img: "images/expressjs.jpg",
+        repo: "https://github.com/hirohtk/friend-finder",
+        deployed: "https://stormy-ocean-54298.herokuapp.com/",
+    },
+    {
+        name: "Eat Da Burger",
+        img: "images/burger.jpg",
+        repo: "https://github.com/hirohtk/burger",
+        deployed: "https://peaceful-badlands-20443.herokuapp.com/",
+    },
+]
+
+// SORTING:  Can make new objects and push based on date created (need to add field), etc
+
+/* <div class="card thumbnail">
+    <div class="card-image waves-effect waves-block waves-light">
+         <img class="activator" src="images/sushi-1080x584.jpg">
+    </div>
+    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Word Guess Game</span>
+
+    </div>
+    <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Word Guess Game<i class="material-icons right">close</i></span>
+        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    </div>
+</div> */
+
 $(document).ready(function () {
     console.log("document ready");
     $('.scrollspy').scrollSpy();
 
     $("#aboutBlock").addClass("flyInLeft");
+
+    function populate(folio) {
+
+        function append() {
+            outerDiv.append(cardImage);
+            cardImage.append(cardImageChild);
+            outerDiv.append(cardContent);
+            cardContent.append(cardContentChild);
+            outerDiv.append(cardReveal);
+            cardReveal.append(cardRevealChild1);
+            cardReveal.append(cardRevealChild2);
+            cardReveal.append(cardRevealChild3);
+        }
+
+        for (i = 0; i < folio.length; i++) {
+            var outerDiv = $("<div class='card thumbnail'></div>");
+            var cardImage = $("<div class='card-image waves-effect waves-block waves-light'></div>");
+            var cardImageChild = $("<img class='activator' src='" + folio[i].img + "'>");
+            var cardContent = $("<div class='card-content'></div>");
+            var cardContentChild = $("<span class='card-title activator grey-text text-darken-4'>" + folio[i].name + "</span>");
+            var cardReveal = $("<div class='card-reveal'></div>");
+            var cardRevealChild1 = $("<span class='card-title grey-text text-darken-4'>" + folio[i].name + "<i class='material-icons right'>close</i></span>");
+            var cardRevealChild2 = $("<p>Github Repository: " + folio[i].repo + "</p>");
+            var cardRevealChild3 = $("<p>Deployed Application: " + folio[i].deployed + "</p>");
+
+            if (i < 4) {
+                $("#col1").append(outerDiv);
+                append();
+            }
+            if (i > 3 && i < 8) {
+                $("#col2").append(outerDiv);
+                append();
+            }
+            if (i > 7 && i < 12) {
+                $("#col3").append(outerDiv);
+                append();
+            }
+        }
+    }
+
+    populate(portfolio);
 
     $(document).scroll(function () {
         var y = $(this).scrollTop();
@@ -36,12 +144,12 @@ $(document).ready(function () {
             row1.append(row2);
             row2.append(row3);
             $(this).parent().attr("id", "commentBox");
-    
-            $('html,body').css('cursor','crosshair');
-            
+
+            $('html,body').css('cursor', 'crosshair');
+
             function delay() {
-                $(document).one("click", function() {
-                    $('html,body').css('cursor','');
+                $(document).one("click", function () {
+                    $('html,body').css('cursor', '');
                     var x = event.clientX;
                     var y = event.clientY;
                     console.log(x, y);
@@ -51,8 +159,8 @@ $(document).ready(function () {
                     row4.append(appendrow4a);
                     row4.append(appendrow4b);
                     $(document.elementFromPoint(1637, 425)).click();
-                    
-                    $("#commentSubmit").on("click", function() {
+
+                    $("#commentSubmit").on("click", function () {
                         var objForBackEnd = {
                             coordinates: (x, y),
                             comment: $("#textarea2").val().trim(),
@@ -68,13 +176,13 @@ $(document).ready(function () {
                     )
                 });
             }
-            
+
             setTimeout(delay, 100);
             // doing this because the document onclick would fire as soon as the commentopen gets fired
-            
+
         });
     }
-    
+
 
     $(".thumbnail").mouseover(function () {
 
