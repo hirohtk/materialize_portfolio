@@ -121,11 +121,11 @@ $(document).ready(function () {
 
     $("#sortButton").on("click", function () {
         $("#col1").empty();
-        $("#col1").append("<p>Front End</p>");
+        //$("#col1").append("<p>Front End</p>");
         $("#col2").empty();
-        $("#col2").append("<p>Back End</p>");
+        //$("#col2").append("<p>Back End</p>");
         $("#col3").empty();
-        $("#col3").append("<p>Full Stack</p>");
+        //$("#col3").append("<p>Full Stack</p>");
 
         function sort(folio) {
 
@@ -169,6 +169,28 @@ $(document).ready(function () {
         }
 
         sort(portfolio);
+
+        $(".thumbnail").mouseover(function () {
+
+            // PROBLEM WAS THAT WHENEVER I MOUSE OVER A CHILD ELEMENT IT MOUSES OUT.  CHANGED TO MOUSELEAVE, THINGS SEEM GOOD!
+    
+            $(".thumbnail").removeClass("brighten");
+            $(this).addClass("enlarge");
+            $(this).attr("id", "immune");
+            $(".thumbnail:not(#immune)").addClass("fade");
+    
+            $(this).mouseleave(function () {
+                //$(this).addClass("deflate");
+                $(".thumbnail").addClass("brighten");
+                $(this).removeClass("enlarge");
+                // function deflate() {
+                //     $(".deflate").removeClass("deflate")
+                // }
+                // setTimeout(deflate, 500);
+                $(this).attr("id", "");
+                $(".thumbnail").removeClass("fade");
+            })
+        })
     });
 
     $(document).scroll(function () {
