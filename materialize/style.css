@@ -1,5 +1,79 @@
+body {
+    background-image: linear-gradient(white,rgb(63, 191, 241));
+}
+
+#portfolioBlock {
+    /* NEEDED THESE SO THAT EXPANDING THE CARD WOULDNT PUSH THESE DOWN*/
+    height: 99rem;
+}
+
+#aboutBlock, #portfolioBlock, #contactBlock {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#commentOpen {
+    position: fixed;
+    right: 3%;
+}
+
+#commentBox {
+    width: 15%;
+    position: fixed;
+    right: 10px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+footer {
+    margin-top: 6rem;
+}
+
+#commentInstructions {
+    margin-top: 6rem;
+}
+
+#textarea2, #commentInstructions{
+    width: 14rem !important;
+}
+
+.topText {
+    color:black
+}
+
 nav {
+    background-image: linear-gradient(rgb(63, 191, 241), rgb(75, 158, 253)) !important;
+}
+#kensen {
+    color:black !important;
+    font-family: 'Ibarra Real Nova', serif;
     
+}
+
+.hidden {
+    opacity: 0;
+}
+
+#aboutBlock {
+    height: 24rem;
+
+}
+
+#contactBlock {
+    /* NEEDED positioning of these SO THAT EXPANDING THE CARD WOULDNT PUSH THESE DOWN*/
+    height: 40rem;
+    position: relative;
+}
+
+#contactMe {
+    /* NEEDED positioning of these SO THAT EXPANDING THE CARD WOULDNT PUSH THESE DOWN*/
+    position: absolute;
+    vertical-align: top;
+    top:0px;
+}
+
+.activator {
+    height: 200px;
+    width: 100%;
 }
 
 .thumbnail {
@@ -14,23 +88,23 @@ nav {
     margin-right: 30px;
 }
 
-.activator {
-    width: 300px;
-    height: 200px;
+.scaleup {
+    -webkit-animation: scaleup 0.5s;
+    transform: scale(1.1, 1.1);
 }
 
 .enlarge {
     -webkit-animation: enlarge 0.5s;
-    width: 300px;
-    height: 300px;
-    -webkit-transform: translate(-10px, -10px);
+    width: 310px;
+    height: 310px;
+    -webkit-transform: translate(-5px, -10px);
 }
 
 .deflate {
     -webkit-animation: deflate 0.5s;
     width: 280px;
     height: 280px;
-    -webkit-transform: translate(0x, 0px);
+    -webkit-transform: translate(0px, 0px);
 }
 
 .fade {
@@ -43,6 +117,37 @@ nav {
     filter: brightness(100%);
 }
 
+.flyInLeft {
+    -webkit-animation: flyInLeft 1s;
+    opacity: 1;
+}
+
+@-webkit-keyframes flyInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(-100px, 0px);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+.flyInRight {
+    -webkit-animation: flyInRight 1s;
+    opacity: 1;
+}
+
+@-webkit-keyframes flyInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(100px, 0px);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
 
 @-webkit-keyframes fade {
     0% {
@@ -66,14 +171,26 @@ nav {
 
 @-webkit-keyframes enlarge {
     0% {
-      
+      width: 280px;
+      height: 280px;
       -webkit-transform: translate(0, 0px);
     }
 
     100% {
-        width: 300px;
-        height: 300px;
-      -webkit-transform: translate(-10px, -10px);
+        width: 310px;
+        height: 310px;
+      -webkit-transform: translate(-5px, -10px);
+    }
+}
+
+@-webkit-keyframes scaleup {
+    0% {
+      
+      transform: scale(1, 1);
+    }
+
+    100% {
+       transform: scale(1.1, 1.1);
     }
 }
 
@@ -102,9 +219,8 @@ nav {
     behavior: url(PIE.htc); /* remove if you don't care about IE8 */
 }
 
-.row {
-    margin-top: 6rem;
-    
+.row:not(.not) {
+    margin-top: 15rem;
 }
 
 #yellow {
@@ -174,4 +290,3 @@ nav {
       -webkit-transform: translate(600px, 0px);
     }
 }
-
