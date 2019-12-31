@@ -7,6 +7,15 @@ body {
     height: 99rem;
 }
 
+#portfolioRow {
+    margin-top: 10rem;
+}
+
+#sortButton {
+    position: relative;
+    right: 0px;
+}
+
 #aboutBlock, #portfolioBlock, #contactBlock {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -133,6 +142,10 @@ nav {
     }
 }
 
+span {
+    height: 20px !important;
+}
+
 .flyInRight {
     -webkit-animation: flyInRight 1s;
     opacity: 1;
@@ -151,7 +164,7 @@ nav {
 
 @-webkit-keyframes fade {
     0% {
-      
+        filter: brightness(100%);
     }
 
     100% {
