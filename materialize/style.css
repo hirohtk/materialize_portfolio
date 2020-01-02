@@ -107,17 +107,8 @@ nav {
     margin-right: 30px;
 }
 
-.scaleup {
-    -webkit-animation: scaleup 0.5s;
-    transform: scale(1.1, 1.1);
-}
 
-.enlarge {
-    -webkit-animation: enlarge 0.5s;
-    width: 310px;
-    height: 310px;
-    -webkit-transform: translate(-5px, -10px);
-}
+
 
 .deflate {
     -webkit-animation: deflate 0.5s;
@@ -209,6 +200,13 @@ span {
     }
 }
 
+.enlarge {
+    -webkit-animation: enlarge 0.5s;
+    width: 310px;
+    height: 310px;
+    -webkit-transform: translate(-5px, -10px);
+}
+
 @-webkit-keyframes enlarge {
     0% {
       width: 280px;
@@ -221,6 +219,12 @@ span {
         height: 310px;
       -webkit-transform: translate(-5px, -10px);
     }
+}
+
+
+.scaleup {
+    -webkit-animation: scaleup 0.5s;
+    transform: scale(1.1, 1.1);
 }
 
 @-webkit-keyframes scaleup {

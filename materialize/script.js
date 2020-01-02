@@ -175,10 +175,8 @@ $(document).ready(function () {
 
         sort(portfolio);
 
+        // Repeating listener - sorter function above wipes out the existing listener
         $(".thumbnail").mouseover(function () {
-
-            // PROBLEM WAS THAT WHENEVER I MOUSE OVER A CHILD ELEMENT IT MOUSES OUT.  CHANGED TO MOUSELEAVE, THINGS SEEM GOOD!
-    
             $(".thumbnail").removeClass("brighten");
             $(this).addClass("enlarge");
             $(this).attr("id", "immune");
