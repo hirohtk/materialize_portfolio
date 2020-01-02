@@ -8,7 +8,17 @@ body {
 }
 
 #portfolioRow {
-    margin-top: 10rem;
+    margin-top: 6rem;
+}
+
+.types {
+    position: relative;
+    top: -7rem;
+    left: 7rem;
+}
+
+#col1, #col2, #col3 {
+    position: relative;
 }
 
 #sortButton {

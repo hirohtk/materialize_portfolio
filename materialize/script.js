@@ -28,7 +28,7 @@ var portfolio = [
         type: "BE"
     },
     {
-        name: "Word Guess Game - CLI",
+        name: "Word Guess - CLI",
         img: "images/01-WordGuess-Cli.gif",
         repo: "https://github.com/hirohtk/word_guess_node",
         deployed: "CLI App - Undeployable",
@@ -56,14 +56,14 @@ var portfolio = [
         type: "FS"
     },
     {
-        name: "Group Project - Happy Hour",
+        name: "Project - Happy Hour",
         img: "images/CocktailMain.jpg",
         repo: "https://github.com/neverage84/Project_1",
         deployed: "https://neverage84.github.io/Project_1/",
         type: "FE"
     },
     {
-        name: "Group Project - Spotifind Me!",
+        name: "Project - Spotifind Me!",
         img: "images/spotifindme.png",
         repo: "https://github.com/eawhite00/Project2",
         deployed: "https://immense-caverns-47364.herokuapp.com/",
@@ -121,15 +121,16 @@ $(document).ready(function () {
 
     populate(portfolio);
 
+    // SORTING
     $("#sortButton").on("click", function () {
         $("#col1").empty();
-        //$("#col1").append("<p>Front End</p>");
+        $("#col1").append("<h5 class='types'>Front End</h5>");
         $("#col2").empty();
-        //$("#col2").append("<p>Back End</p>");
+        $("#col2").append("<h5 class='types'>Back End</h5>");
         $("#col3").empty();
-        //$("#col3").append("<p>Full Stack</p>");
+        $("#col3").append("<h5 class='types'>Full Stack</h5>");
 
-        $(this).addClass("hidden")
+        $(this).css("visibility", "hidden");
 
         function sort(folio) {
 
@@ -197,6 +198,8 @@ $(document).ready(function () {
         })
     });
 
+    // SORTING
+
     $(document).scroll(function () {
         ScrollY = $(this).scrollTop();
         if (ScrollY > 200) {
@@ -218,9 +221,9 @@ $(document).ready(function () {
     function commentBox() {
         $("#commentOpen").on("click", function () {
             var row1 = $("<div class='row not'></div>");
-            var row2 = $("<div class='col s12 m5'></div>");
+            var row2 = $("<div class='col s12 m5' id='commentThankYou'></div>");
             var row3 = $("<p id='commentInstructions'>Please click on what you want to comment on</p>")
-            var row4 = $("<div class='input-field col s12'></div>")
+            var row4 = $("<div class='input-field col s12 emptyForThankYou'></div>")
             var appendrow4a = $("<textarea id='textarea2' class='materialize-textarea' data-length='120'></textarea>")
             var appendrow4b = $("<label for='textarea2'>Comment</label>")
             var submitComment = $("<button class='btn waves-effect waves-light' id='commentSubmit' type='submit' name='action'>Submit</button>");
@@ -239,7 +242,7 @@ $(document).ready(function () {
                     var y = event.clientY;
                     console.log(x, y);
                     row3.empty();
-                    row3.append(row4);
+                    row2.append(row4);
                     row2.append(submitComment);
                     row4.append(appendrow4a);
                     row4.append(appendrow4b);
@@ -258,8 +261,16 @@ $(document).ready(function () {
                         // ajax post to my API if hooking to db
                         // Can't I write an API that simply posts to my sql database?  Just make a website with a post route? 
 
-                        $("#commentOpen").parent().attr("id", "");
-                        $("#commentOpen").parent().children().not("#commentOpen").remove();
+                        $(".emptyForThankYou").empty();
+                        $("#commentSubmit").remove();
+                        $("#commentThankYou").append("<p style='position: fixed; margin: 0 auto;'>Thank you for your comment!</p>");
+
+                        function removeCommentBox() {
+                            $("#commentOpen").parent().attr("id", "");
+                            $("#commentOpen").parent().children().not("#commentOpen").remove();
+                        }
+                        setTimeout(removeCommentBox, 3500);
+
                         // recursion:  had to put this entire thing in a function so that initial click handler could be run again/reset
                         commentBox();
                     }
@@ -268,7 +279,7 @@ $(document).ready(function () {
             }
 
             setTimeout(delay, 100);
-            // doing this because the document onclick would fire as soon as the commentopen gets fired
+            // doing this because the document onclick would fire as soon as the commentopen gets fired, cancelling the right position
 
         });
     }
