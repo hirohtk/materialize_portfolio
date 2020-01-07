@@ -68,6 +68,22 @@ nav {
     
 }
 
+.thumbnailFade {
+    -webkit-animation: thumbnailFade 1s;
+    opacity: 1;
+}
+
+@-webkit-keyframes thumbnailFade {
+    0% {
+        opacity: 0;
+        
+    }
+    100% {
+        
+        opacity: 1;
+    }
+}
+
 .hidden {
     opacity: 0;
 }
@@ -106,9 +122,6 @@ nav {
     margin-bottom: 30px;
     margin-right: 30px;
 }
-
-
-
 
 .deflate {
     -webkit-animation: deflate 0.5s;

@@ -161,16 +161,20 @@ $(document).ready(function () {
                     $("#col1").append(outerDiv);
                     append();
                     break;
+
                     case "BE": 
                     $("#col2").append(outerDiv);
                     append();
                     break;
+
                     case "FS": 
                     $("#col3").append(outerDiv);
                     append();
                     break;
                 }
+                
             }
+            $(".thumbnail").addClass("thumbnailFade");
         }
 
         sort(portfolio);
