@@ -7,6 +7,25 @@ body {
     height: 99rem;
 }
 
+#portfolioRow {
+    margin-top: 6rem;
+}
+
+.types {
+    position: relative;
+    top: -7rem;
+    left: 7rem;
+}
+
+#col1, #col2, #col3 {
+    position: relative;
+}
+
+#sortButton {
+    position: relative;
+    right: 0px;
+}
+
 #aboutBlock, #portfolioBlock, #contactBlock {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -88,17 +107,8 @@ nav {
     margin-right: 30px;
 }
 
-.scaleup {
-    -webkit-animation: scaleup 0.5s;
-    transform: scale(1.1, 1.1);
-}
 
-.enlarge {
-    -webkit-animation: enlarge 0.5s;
-    width: 310px;
-    height: 310px;
-    -webkit-transform: translate(-5px, -10px);
-}
+
 
 .deflate {
     -webkit-animation: deflate 0.5s;
@@ -133,6 +143,10 @@ nav {
     }
 }
 
+span {
+    height: 20px !important;
+}
+
 .flyInRight {
     -webkit-animation: flyInRight 1s;
     opacity: 1;
@@ -149,9 +163,26 @@ nav {
     }
 }
 
+@-webkit-keyframes flyInTop {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(0px, -100px);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+.flyInTop {
+    -webkit-animation: flyInTop 1s;
+    animation-delay: 1s;
+    opacity: 1;
+}
+
 @-webkit-keyframes fade {
     0% {
-      
+        filter: brightness(100%);
     }
 
     100% {
@@ -169,6 +200,13 @@ nav {
     }
 }
 
+.enlarge {
+    -webkit-animation: enlarge 0.5s;
+    width: 310px;
+    height: 310px;
+    -webkit-transform: translate(-5px, -10px);
+}
+
 @-webkit-keyframes enlarge {
     0% {
       width: 280px;
@@ -181,6 +219,12 @@ nav {
         height: 310px;
       -webkit-transform: translate(-5px, -10px);
     }
+}
+
+
+.scaleup {
+    -webkit-animation: scaleup 0.5s;
+    transform: scale(1.1, 1.1);
 }
 
 @-webkit-keyframes scaleup {
