@@ -101,8 +101,8 @@ $(document).ready(function () {
             var cardContentChild = $("<span class='card-title activator grey-text text-darken-4'>" + folio[i].name + "</span>");
             var cardReveal = $("<div class='card-reveal'></div>");
             var cardRevealChild1 = $("<span class='card-title grey-text text-darken-4'>" + folio[i].name + "<i class='material-icons right'>close</i></span>");
-            var cardRevealChild2 = $("<p>Github Repository: " + folio[i].repo + "</p>");
-            var cardRevealChild3 = $("<p>Deployed Application: " + folio[i].deployed + "</p>");
+            var cardRevealChild2 = $("<p>Github Repository: <a href=" + "'" + folio[i].repo + "'" + ">" + folio[i].repo + "</a></p>");
+            var cardRevealChild3 = $("<p>Deployed Application: <a href=" + "'" + folio[i].deployed + "'" + ">" + folio[i].deployed + "</a></p>");
 
             if (i < 4) {
                 $("#col1").append(outerDiv);
@@ -153,8 +153,8 @@ $(document).ready(function () {
                 var cardContentChild = $("<span class='card-title activator grey-text text-darken-4'>" + folio[i].name + "</span>");
                 var cardReveal = $("<div class='card-reveal'></div>");
                 var cardRevealChild1 = $("<span class='card-title grey-text text-darken-4'>" + folio[i].name + "<i class='material-icons right'>close</i></span>");
-                var cardRevealChild2 = $("<p>Github Repository: " + folio[i].repo + "</p>");
-                var cardRevealChild3 = $("<p>Deployed Application: " + folio[i].deployed + "</p>");
+                var cardRevealChild2 = $("<p>Github Repository: <a href=" + "'" + folio[i].repo + "'" + ">" + folio[i].repo + "</a></p>");
+                var cardRevealChild3 = $("<p>Deployed Application: <a href=" + "'" + folio[i].deployed + "'" + ">" + folio[i].deployed + "</a></p>");
     
                 switch (folio[i].type) {
                     case "FE": 
