@@ -69,6 +69,13 @@ var portfolio = [
         deployed: "https://immense-caverns-47364.herokuapp.com/",
         type: "FS"
     },
+    {
+        name: "News Scraper",
+        img: "images/newspaper-760x506 (1).jpg",
+        repo: "https://github.com/hirohtk/news_scraper_assignment",
+        deployed: "https://glacial-crag-21152.herokuapp.com/",
+        type: "FS"
+    },
 ]
 
 // SORTING:  Can make new objects and push based on date created (need to add field), etc
