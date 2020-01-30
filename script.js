@@ -76,6 +76,20 @@ var portfolio = [
         deployed: "https://glacial-crag-21152.herokuapp.com/",
         type: "FS"
     },
+    {
+        name: "React - Click Game",
+        img: "images/majestic.png",
+        repo: "https://github.com/hirohtk/react_click_game",
+        deployed: "https://hirohtk.github.io/react_click_game/",
+        type: "FE"
+    },
+    {
+        name: "React - Books App",
+        img: "images/books.jpg",
+        repo: "https://github.com/hirohtk/google_books_react_mongoose",
+        deployed: "https://thawing-cove-16195.herokuapp.com/",
+        type: "FS"
+    },
 ]
 
 // SORTING:  Can make new objects and push based on date created (need to add field), etc
@@ -111,7 +125,7 @@ $(document).ready(function () {
             var cardRevealChild2 = $("<p>Github Repository: <a href=" + "'" + folio[i].repo + "'" + "target=_blank>" + folio[i].repo + "</a></p>");
             var cardRevealChild3 = $("<p>Deployed Application: <a href=" + "'" + folio[i].deployed + "'" + "target=_blank>" + folio[i].deployed + "</a></p>");
 
-            if (i < 4) {
+            if (i < 4 || i > 11 && i < 16) {
                 $("#col1").append(outerDiv);
                 append();
             }

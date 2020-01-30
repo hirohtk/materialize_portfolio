@@ -4,7 +4,7 @@ body {
 
 #portfolioBlock {
     /* NEEDED THESE SO THAT EXPANDING THE CARD WOULDNT PUSH THESE DOWN*/
-    height: 99rem;
+    height: 100%;
    
 }
 
